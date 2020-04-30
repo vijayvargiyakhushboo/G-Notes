@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+
+        <!-- <div class="form_bg"> -->
+        	
+            <form (ngSubmit)="login(loginForm)" #loginForm="ngForm">
+                 
+
+                 <h2 class="text-center">Log in</h2>
+                 <div class="{{alertType}}" *ngIf="alert">
+                                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                      <i class="icofont icofont-close-line-circled text-white"></i>
+                                  </button>
+                                  {{res}} &nbsp; 
+                              </div>
+                <br/>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email" name="email" required  email #email="ngModel" ngModel placeholder="User id">
+                    <div *ngIf="loginForm.submitted && email.invalid && email.touched">Enter valid Email</div>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password" name="password" required ngModel placeholder="Password" #password="ngModel">
+                    <div  *ngIf="loginForm.submitted && password.invalid && password.touched">Password is required.</div>
+                </div>
+                <br/>
+                <div class="align-center">
+                    <button type="submit" class="btn btn-primary" id="login">Login</button>
+                </div>
+            </form>
+        <!-- </div> -->
+    </div>
+</div>
