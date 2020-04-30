@@ -7,7 +7,7 @@ class="list-group-item clearfix"
  >
 			<div class="panel">
 				<div class="panel-heading" class="list-group-item-heading">{{ note.title }}
-				<i class="fa fa-times pull-right" ></i></div>
+				<i class="fa fa-times pull-right" title="Delete" (click)="deleteNote(i)"></i></div>
 				<div class="panel-body" class="list-group-item-text">{{ note.body }}</div>
 			</div>
 			

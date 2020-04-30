@@ -29,6 +29,9 @@ export class NotesComponent implements OnInit {
   		})
   }
   saveNote(form:NgForm){
+  	if(form.invalid){
+  		return false
+  	}
   	const newNote = new Notes(form.value.title,form.value.body)
   	if(this.editMode){
   		this.noteService.updateNote(this.editedItemIndex,newNote)

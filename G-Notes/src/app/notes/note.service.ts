@@ -1,7 +1,6 @@
 import { EventEmitter } from '@angular/core';
 import { Notes } from './notes.model';
 import { Observable,of,from } from 'rxjs';
-//import { of } from 'rxjs/observable/of';
 import { Subject } from 'rxjs';
 
 export class NoteService {
@@ -27,6 +26,10 @@ addNote(note:Notes){
 
 updateNote(index:number,updateNoteData:Notes){
 	this.notes[index]= updateNoteData
+	this.notesChange.next(this.notes.slice())
+}
+deleteNote(index:number){
+	this.notes.splice(index,1)
 	this.notesChange.next(this.notes.slice())
 }
 } 

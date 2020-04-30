@@ -19,5 +19,8 @@ notes:any[]
   onEdit(index:number){
   	this.noteService.editNote.next(index)
   }
+  deleteNote(index:number) {
+  	this.noteService.deleteNote(index)
+  }
 
 }

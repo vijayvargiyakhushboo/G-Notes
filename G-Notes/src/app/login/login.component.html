@@ -1,11 +1,6 @@
 <div class="container">
     <div class="row">
-
-        <!-- <div class="form_bg"> -->
-        	
             <form (ngSubmit)="login(loginForm)" #loginForm="ngForm">
-                 
-
                  <h2 class="text-center">Log in</h2>
                  <div class="{{alertType}}" *ngIf="alert">
                                   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -27,6 +22,5 @@
                     <button type="submit" class="btn btn-primary" id="login">Login</button>
                 </div>
             </form>
-        <!-- </div> -->
     </div>
 </div>

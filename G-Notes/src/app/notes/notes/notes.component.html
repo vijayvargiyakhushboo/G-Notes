@@ -15,7 +15,10 @@
 		<div class="col-xs-12">
 			<div class="form-group">
 				<label for="title">Title</label>
-				<input type="text" name="title" id="title" class="form-control" ngModel #title="ngModel">
+				<input type="text" name="title" id="title" class="form-control" #title="ngModel" ngModel required>
+				<div *ngIf="form.submitted && title.invalid">Title is required</div>
+				                   
+
 			</div>
 		</div>
 	</div>
@@ -24,13 +27,14 @@
 		<div class="col-xs-12">
 			<div class="form-group">
 				<label for="body">Body</label>
-				<textarea name="body" ngModel class="form-control" #body="ngModel"></textarea>
+				<textarea name="body"  class="form-control" #body="ngModel" ngModel required></textarea>
+				<div *ngIf="form.submitted && body.invalid">Body is required</div>
 			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-xs-12">
-			<button type="submit" class="btn btn-primary pull-right">Save</button>
+			<button type="submit" class="btn btn-primary pull-right">{{ editMode ? 'Update' : 'Save'}}</button>
 		</div>
 	</div>
 </form></div></div>

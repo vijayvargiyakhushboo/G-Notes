@@ -9,7 +9,6 @@ import { NotesComponent } from './notes/notes/notes.component';
 import { NotesListComponent } from './notes/notes-list/notes-list.component';
 import { NoteService } from './notes/note.service'
 
-
 @NgModule({
   declarations: [
     AppComponent,

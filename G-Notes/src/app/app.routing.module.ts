@@ -5,6 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import { NotesComponent } from './notes/notes/notes.component';
 import { NotesListComponent } from './notes/notes-list/notes-list.component';
 import { FormsModule } from '@angular/forms';
+import { AuthGuard } from './auth/auth.guard';
 
 const appRoutes= [
 {
@@ -13,7 +14,8 @@ const appRoutes= [
 },
 {
  path: 'notes',
- component: HeaderComponent
+ component: HeaderComponent,
+ canActivate:[AuthGuard]
 }]
 
 @NgModule({
