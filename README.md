@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5.
 
+# Project
+This is simple single page app that is containing two component login and container in this we can add note,edit note and delete note.For CRUD ,Only use javascript.
+
 ## How to use this
 First clone this repo on to your machine and after that go to the project directory.
 After that run below commands
